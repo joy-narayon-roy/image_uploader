@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+        integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+        <link rel="stylesheet" href="/assets/style.css">
+</head>
+
+<body>
+    <section class="upload--card">
+        <div action="">
+            <div id="inputArea" class="upload--card_area">
+                <span><i class="far fa-image"></i></span>
+            </div>
+            <div id="upprba" class="upload--card_progress d-none">
+                <span class="file-icon"><i style="display: block;" class="fas fa-file-image"></i></span>
+                <div class="file-details">
+                    <span id="upfina" class="file-name">Some New.jpg</span>
+                    <progress id="upfipo"></progress>
+                </div>
+            </div>
+            
+        </div>
+        <ul class="upload--card_files">
+
+            <% for(let file of fileList){ %>
+                <li class="upload--card_files-file">
+                    <span class="file-icon"><i class="fas fa-file-image"></i></span>
+                    <span class="file-name"><%= file %></span>
+                    <span class="file-status"><i class="success fas fa-check-circle"></i></span>
+                </li>
+            <% } %>
+        </ul>
+    </section>
+
+    <script src="/assets/index.js"></script>
+</body>
+
+</html>
